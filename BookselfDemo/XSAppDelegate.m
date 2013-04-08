@@ -7,8 +7,9 @@
 //
 
 #import "XSAppDelegate.h"
-
+#import "PSTCollectionView.h"
 #import "XSViewController.h"
+#import "XSUICollectionViewFlowLayout.h"
 
 @implementation XSAppDelegate
 
@@ -16,7 +17,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[XSViewController alloc] initWithNibName:@"XSViewController" bundle:nil];
+    XSUICollectionViewFlowLayout *layout = [[XSUICollectionViewFlowLayout alloc] init];
+    self.viewController = [[XSViewController alloc] initWithCollectionViewLayout:layout];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

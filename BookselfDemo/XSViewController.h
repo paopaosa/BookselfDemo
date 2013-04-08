@@ -6,8 +6,11 @@
 //  Copyright (c) 2013年 ICV. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <PSTCollectionView/PSTCollectionView.h>
 
-@interface XSViewController : UIViewController
+@interface XSViewController : PSUICollectionViewController
+
+@property (nonatomic,assign) int cellCount;
+@property (nonatomic,strong) PSUICollectionView *collectionView;
 
 @end
