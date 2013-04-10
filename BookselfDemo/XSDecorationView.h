@@ -9,6 +9,9 @@
 #import <PSTCollectionView.h>
 
 @interface XSDecorationView : PSUICollectionReusableView
+{
+    UIImageView *_bgView;
+}
 
 + (NSString *)kind;
 

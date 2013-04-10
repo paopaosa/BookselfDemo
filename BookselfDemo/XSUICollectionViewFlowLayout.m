@@ -57,7 +57,12 @@
             for (int row = 0; row < rows; row++)
             {
                 y += self.itemSize.height;
-                dictionary[[NSIndexPath indexPathForItem:row inSection:section]] = [NSValue valueWithCGRect:CGRectMake(0, y - marginY, self.collectionViewContentSize.width, 37)];
+//                dictionary[[NSIndexPath indexPathForItem:row inSection:section]] = [NSValue valueWithCGRect:CGRectMake(0, y - marginY, self.collectionViewContentSize.width, self.minimumLineSpacing + self.itemSize.height)];
+                dictionary[[NSIndexPath indexPathForItem:row inSection:section]] =
+                [NSValue valueWithCGRect:CGRectMake(0,
+                                                    y - self.itemSize.height - self.headerReferenceSize.height + marginY,
+                                                    self.collectionViewContentSize.width,
+                                                    self.itemSize.height + self.minimumLineSpacing)];
                 
                 if (row < rows - 1)
                     y += self.minimumLineSpacing;
@@ -93,7 +98,7 @@
     NSArray *array = [super layoutAttributesForElementsInRect:rect];
     
     // tweak the attributes slightly
-    for (UICollectionViewLayoutAttributes *attributes in array)
+    for (PSUICollectionViewLayoutAttributes *attributes in array)
     {
         attributes.zIndex = 1;
         /*if (attributes.representedElementCategory != UICollectionElementCategorySupplementaryView || [attributes.representedElementKind isEqualToString:UICollectionElementKindSectionHeader])
@@ -133,13 +138,13 @@
     return array;
 }
 
-//// Layout attributes for a specific cell
-//- (PSUICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    PSUICollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:indexPath];
-//    attributes.zIndex = 1;
-//    return attributes;
-//}
+// Layout attributes for a specific cell
+- (PSUICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    PSUICollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:indexPath];
+    attributes.zIndex = 1;
+    return attributes;
+}
 
 - (PSUICollectionViewLayoutAttributes *)layoutAttributesForDecorationViewOfKind:(NSString *)decorationViewKind atIndexPath:(NSIndexPath *)indexPath
 {

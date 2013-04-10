@@ -11,7 +11,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, frame.size.width, frame.size.height)];
+        UILabel *label = [[UILabel alloc] initWithFrame:self.bounds];
         label.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
         label.textAlignment = UITextAlignmentCenter;
         label.font = [UIFont boldSystemFontOfSize:50.0];

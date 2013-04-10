@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28F26A3C17158CD800C2D853 /* bookshelf_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28F26A3A17158CD800C2D853 /* bookshelf_bg.jpg */; };
+		28F26A3D17158CD800C2D853 /* bookshelf_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28F26A3B17158CD800C2D853 /* bookshelf_bg@2x.jpg */; };
 		CE07500517126BAC008B1D09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE07500417126BAC008B1D09 /* UIKit.framework */; };
 		CE07500717126BAC008B1D09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE07500617126BAC008B1D09 /* Foundation.framework */; };
 		CE07500917126BAC008B1D09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE07500817126BAC008B1D09 /* CoreGraphics.framework */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28F26A3A17158CD800C2D853 /* bookshelf_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookshelf_bg.jpg; sourceTree = "<group>"; };
+		28F26A3B17158CD800C2D853 /* bookshelf_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bookshelf_bg@2x.jpg"; sourceTree = "<group>"; };
 		4A1976AF415D4016A3458F75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5866C65090F4E06957E933D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		CE07500117126BAC008B1D09 /* BookselfDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookselfDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +146,8 @@
 		CE94DD1117128751000886CF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				28F26A3A17158CD800C2D853 /* bookshelf_bg.jpg */,
+				28F26A3B17158CD800C2D853 /* bookshelf_bg@2x.jpg */,
 				CE94DD1517128B78000886CF /* Apple-Wood.png */,
 				CE94DD1617128B78000886CF /* Apple-Wood@2x.png */,
 				CE94DD0D1712874C000886CF /* Wood-Planks.png */,
@@ -211,6 +217,8 @@
 				CE94DD101712874C000886CF /* Wood-Planks@2x.png in Resources */,
 				CE94DD1717128B78000886CF /* Apple-Wood.png in Resources */,
 				CE94DD1817128B78000886CF /* Apple-Wood@2x.png in Resources */,
+				28F26A3C17158CD800C2D853 /* bookshelf_bg.jpg in Resources */,
+				28F26A3D17158CD800C2D853 /* bookshelf_bg@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
